@@ -1,0 +1,14 @@
+{
+    "description": "Test de Google maps",
+    "authors": [{
+        "name": "Joel & Marcel",
+        "email": "joelviltus.edu@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Sts\\": "app/sts",
+            "Core\\": "core"
+        }
+    },
+    "require": {}
+}
