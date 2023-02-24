@@ -7,37 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Formulário de orçamento</h1>
-    <form action="" method="POST">
-        <label for="">Origem</label>
-        <input type="text" name="start"><br><br>
-        <label for="">Destino</label>
-        <input type="text" name="end"><br><br>
-        <button type="submit" name="smgSend" value="smgSend">Enviar</button>
+    <h1>Formulário parte 1</h1>
+    <form action="<?php URL ?>mapa1" method="POST" >
+        <input type="text" name="cep1" placeholder="CEP">
+
+        <input type="text" name="start" placeholder="Endereço 1">
+        <input type="number" name="number1" placeholder="Número"><br><br>
+        
+        <input type="text" name="city1" placeholder="Cidade">
+        <input type="text" name="complement1" placeholder="Complemento">
+        <input type="text" name="neighborhood1" placeholder="Bairro">
+        <input type="text" name="state1" placeholder="Estado"><br><br>
+        <input type="text" name="immobile1" placeholder="Tipo de imóvel"><br><br>
+
+        <button type="submit" name="smgSend" value="smgSend">Próximo</button>
     </form><br>
-
-        <!-- Calcúlo da distância -->
-        <div id="container">
-        <div id="map"></div>
-        <div id="sidebar">
-          <h3 style="flex-grow: 0">Request</h3>
-          <pre style="flex-grow: 1" id="request"></pre>
-          <h3 style="flex-grow: 0">Response</h3>
-          <pre style="flex-grow: 1" id="response"></pre>
-        </div>
-      </div>
-
-      <!-- Traçagem da rota -->
-      <div hidden id="floating-panel">
-        <select id="start">
-          <option value="<?php if(isset($_SESSION['adress1'])){echo $_SESSION['adress1'];unset($_SESSION['adress1']);} ?>"></option>
-        </select>
-        <select id="end">
-          <option value="<?php     if(isset($_SESSION['adress2'])){echo $_SESSION['adress2'];unset($_SESSION['adress2']);} ?>"></option>
-        </select>
-      </div>
-      <div id="map"></div>
-      &nbsp;
-      <div id="warnings-panel"></div>
 </body>
 </html>
